@@ -24,14 +24,8 @@ function mostrarCuadroDialogo() {
   }).then(() => {
     audio.src = "./music/Cuando_Sonries.mp3";
     audio.play();
-    mostrarImagenCosmos();
     ejecutarEscribirTexto();
   });
-}
-
-function mostrarImagenCosmos() {
-  const imagenCosmos = document.querySelector("#carta:before");
-  imagenCosmos.style.opacity = "0.3";
 }
 
 function escribirTexto(texto, elemento, intervalo) {
