@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, #ff4242, #f12e2e); /* Gradiente de rojo intenso a carmesí */
+  background: linear-gradient(to bottom right, #ffefd5, #e9d8a6);
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 20px;
@@ -14,40 +14,29 @@ body {
 }
 
 #carta {
-  position: relative;
   width: 100%;
   max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra más suave */
-  padding: 40px;
-  border-radius: 20px;
+  background-color: #fffcf2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
   text-align: justify;
+  position: relative;
 }
 
 #carta:before {
   content: "";
   position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background-image: url("https://i.imgur.com/KjzTt8H.jpg"); /* Imagen del cosmos */
-  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("gplaypattern.png");
+  opacity: 0.2;
   z-index: -1;
-  transition: opacity 0.5s ease; /* Agregamos una transición para suavizar la aparición de la imagen */
 }
 
 #texto {
-  font-size: 20px;
-  line-height: 1.8;
-  color: #333; /* Color de texto ligeramente más oscuro */
-}
-
-/* Estilos adicionales para el título */
-h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff; /* Color de texto blanco */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto suave */
+  font-size: 18px;
+  line-height: 1.6;
 }
