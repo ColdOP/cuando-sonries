@@ -21,9 +21,11 @@ function mostrarCuadroDialogo() {
       left top
       no-repeat
     `,
-  }).then(() => {
-    audio.src = "./music/Cuando_Sonries.mp3";
-    audio.play();
+  }).then((result) => {
+    if (result.isConfirmed) {
+      audio.src = "./music/Cuando_Sonries.mp3";
+      audio.play();
+    }
     ejecutarEscribirTexto();
   });
 }
