@@ -8,8 +8,7 @@ function mostrarCuadroDialogo() {
   const dialogo = Swal.fire({
     title: "¿Deseas escuchar mi voz?",
     text: "Hice una grabación especial para ti",
-    imageUrl:
-      "https://cdn.pixabay.com/photo/2023/11/16/15/49/ai-generated-8392596_960_720.png",
+    imageUrl: "https://cdn.pixabay.com/photo/2023/11/16/15/49/ai-generated-8392596_960_720.png",
     imageWidth: 200,
     imageHeight: 200,
     imageAlt: "Imagen de avatar",
@@ -22,13 +21,17 @@ function mostrarCuadroDialogo() {
       left top
       no-repeat
     `,
-  }).then((result) => {
-    if (result.isConfirmed) {
-      audio.src = "./music/Cuando_Sonries.mp3";
-      audio.play();
-    }
+  }).then(() => {
+    audio.src = "./music/Cuando_Sonries.mp3";
+    audio.play();
+    mostrarImagenCosmos();
     ejecutarEscribirTexto();
   });
+}
+
+function mostrarImagenCosmos() {
+  const imagenCosmos = document.querySelector("#carta:before");
+  imagenCosmos.style.opacity = "0.3";
 }
 
 function escribirTexto(texto, elemento, intervalo) {
